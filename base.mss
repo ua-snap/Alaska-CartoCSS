@@ -394,6 +394,7 @@ Map {
   eraser/line-width: 1;
   eraser/comp-op: darken;
   line-color: @admin_2;
+  line-opacity: .2;
   line-width: 1;
   [admin_level>2] {
     line-dasharray: 10,5;

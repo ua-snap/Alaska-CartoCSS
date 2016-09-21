@@ -98,8 +98,8 @@
 /* ---- Cities and Towns ----------------------------------------------- */
 
 #low_place[is_capital='country'][zoom>=4][zoom<=10],
-#low_place[type='city'][zoom>=7][zoom<=10],
-#low_place[type='town'][zoom>=9][zoom<=10] {
+#low_place[type='city'][zoom>=4][zoom<=10],
+#low_place[type='town'][zoom>=4][zoom<=10] {
   shield-file: url('icons/place/town.png');
   [type='city'] {
     shield-file: url('icons/place/city.png');
@@ -200,9 +200,9 @@
 
 /* ---- Other small places ------------------------------------------ */
 
-#place::small[type='village'][zoom>=11][zoom<=20],
-#place::small[type='suburb'][zoom>=13][zoom<=20],
-#place::small[type='hamlet'][zoom>=13][zoom<=20],
+#place::small[type='village'][zoom>=5][zoom<=20],
+#place::small[type='suburb'][zoom>=6][zoom<=20],
+#place::small[type='hamlet'][zoom>=6][zoom<=20],
 #place::small[type='neighbourhood'][zoom>=13][zoom<=20] {
   text-name:'[name]';
   text-face-name:@sans;

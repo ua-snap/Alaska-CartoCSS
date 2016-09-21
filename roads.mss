@@ -32,7 +32,7 @@ and trunks. */
 /* At mid-level scales start to show primary and secondary routes
 as well. */
 
-#roads_med[zoom>=9][zoom<=10] {
+#roads_med[zoom>=5][zoom<=10] {
   [type='motorway'],
   [type='motorway_link'] {
     line-color: @motorway_line;
