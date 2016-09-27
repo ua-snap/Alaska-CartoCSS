@@ -22,78 +22,11 @@
 
 /* ---- Countries --------------------------------------------------- */
 
-#low_place[type='country'][zoom>=3][zoom<=7] {
-  text-name:'[name]';
-  text-face-name:@sans_bold;
-  text-placement:point;
-  text-fill:@country_text;
-  text-halo-fill: @country_halo;
-  text-halo-radius: 1;
-  [zoom=3] {
-    text-size: 9;
-    text-wrap-width: 40;
-  }
-  [zoom>=4] {
-    text-size: 11;
-    text-wrap-width: 50;
-  }
-  [zoom>=5] {
-    text-halo-radius: 2;
-    text-wrap-width: 50;
-    text-line-spacing: 1;
-  }
-  [zoom=6] {
-    text-size: 13;
-    text-character-spacing: 0;
-    text-wrap-width: 80;
-    text-line-spacing: 2;
-  }
-  [zoom=7] {
-    text-size: 14;
-    text-character-spacing: 1;
-  }
-}
+
 
 /* ---- States ------------------------------------------------------ */
 
-#low_place[type='state'][zoom>=5][zoom<=10] {
-  text-name:'[name]';
-  text-face-name:@sans_bold_italic;
-  text-placement:point;
-  text-fill:@state_text;
-  text-halo-fill: @state_halo;
-  text-halo-radius: 1;
-  [zoom=5] {
-    text-size:9 + @text_adjust;
-    text-wrap-width: 35;
-  }
-  [zoom=6] {
-    text-size:10 + @text_adjust;
-    text-wrap-width: 40;
-  }
-  [zoom=7] {
-    text-size:11 + @text_adjust;
-    text-wrap-width: 50;
-  }
-  [zoom>8] {
-    text-halo-radius: 2;
-  }
-  [zoom=8] {
-    text-size:11 + @text_adjust;
-    text-wrap-width: 50;
-    text-line-spacing: 1;
-  }
-  [zoom=9] {
-    text-size:12 + @text_adjust;
-    text-character-spacing: 1;
-    text-wrap-width: 80;
-    text-line-spacing: 2;
-  }
-  [zoom=10] {
-    text-size:14 + @text_adjust;
-    text-character-spacing: 2;
-  }
-}
+
 
 /* ---- Cities and Towns ----------------------------------------------- */
 

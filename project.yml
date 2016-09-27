@@ -1,17 +1,17 @@
 bounds:
-  - 28.9874267578125
-  - -4.4833328616955255
-  - 30.871582031249996
-  - -2.284550660236957
+  - -2255938.4795
+  - 449981.1884
+  - 1646517.6368
+  - 2676986.5642
 center:
-  - 29.9377
-  - -3.4216
-  - 9
+  - -304710.42135
+  - 1563483.8763
+  - 5
 format: png
 interactivity: false
 minzoom: 0
-maxzoom: 20
-srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+maxzoom: 12
+srs: +proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs
 Stylesheet:
   - "palette.mss"
   - "base.mss"
@@ -21,7 +21,7 @@ Stylesheet:
   - "labels.mss"
 Layer:
   - Datasource:
-      file: /home/robot/src/base-data/simplified-land-polygons-complete-3857/simplified_land_polygons.shp
+      file: /usr/local/share/maps/data/simplified-land-polygons-complete-3857/simplified_land_polygons.shp
       type: shape
     class: shp
     geometry: polygon
@@ -35,7 +35,7 @@ Layer:
     srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
     srs-name: 900913
   - Datasource:
-      file: /home/robot/src/base-data/land-polygons-split-3857/land_polygons.shp
+      file: /usr/local/share/maps/data/land-polygons-split-3857/land_polygons.shp
       type: shape
     class: shp
     geometry: polygon
@@ -144,19 +144,19 @@ Layer:
       extent_from_subquery: 'true'
   # - geometry: raster
   #   extent:
-  #     - -179.99988650551296
+  #     - -9
   #     - -60.01077716383244
-  #     - 179.999898712822
-  #     - 60.01041647383395
+  #     - -5
+  #     - 2
   #   id: hillshade
   #   class: ''
   #   Datasource:
-  #     file: /home/ybon/Code/maps/hdm/DEM/data/hillshade.vrt
+  #     file: /home/robot/shared/hillshade-overlay.tif
   #     type: gdal
-  #   srs-name: 900913
-  #   srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+  #   srs-name: 3857
+  #   srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs
   #   advanced: {}
-  #   name: hillshade
+  #   name: hillshade    
   # - geometry: linestring
   #   extent:
   #     - -179.99999692067183
@@ -166,7 +166,7 @@ Layer:
   #   id: contour_line
   #   class: ''
   #   Datasource:
-  #     file: /home/ybon/Code/maps/hdm/DEM/data/contour-25m.shp
+  #     file: /usr/local/share/maps/data/contour/contour.shp
   #     type: shape
   #   srs-name: autodetect
   #   srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
@@ -467,7 +467,7 @@ Layer:
       password: ''
       port: 5432
       project: HDMCartoCSS
-      table: "( SELECT way, admin_level::integer, CASE WHEN tags->'maritime'='yes' THEN 'yes' ELSE 'no' END AS maritime FROM planet_osm_roads WHERE \"boundary\" = 'administrative' AND admin_level IN ('1','2','3','4') AND \"boundary\" IS NOT NULL ORDER by admin_level DESC) AS data"
+      table: "( SELECT way, admin_level::integer, CASE WHEN tags->'maritime'='yes' THEN 'yes' ELSE 'no' END AS maritime, tags->'border_type' AS border_type FROM planet_osm_roads WHERE \"boundary\" = 'administrative' AND admin_level IN ('1','2','3','4') AND \"boundary\" IS NOT NULL ORDER by admin_level DESC) AS data"
       type: postgis
       extent: '-20037508,-19929239,20037508,19929239'
       user: osm

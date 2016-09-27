@@ -175,40 +175,6 @@
 /* RELIEF
 /* ================================================================== */
 
-#hillshade[zoom>=4]{
-    raster-scaling: bilinear;
-    raster-comp-op: multiply;
-    raster-opacity: 0.85;
-
-    [zoom>=5]  {raster-opacity: 0.65;}
-    [zoom>=7]  {raster-opacity: 0.55;}
-    [zoom>=9]  {raster-opacity: 0.45;}
-    [zoom>=10] {raster-opacity: 0.40;}
-    [zoom>=14] {raster-opacity: 0.30;}
-    [zoom>=16] {raster-opacity: 0.25;}
-}
-
-#contour_line[zoom>=12]{
-  line-width: 0.2;
-  line-color: @contour_line;
-  [zoom>=15] {
-    line-width: 0.5;
-  }
-  [height=~'^\d00$'] {
-    line-width: 0.5;
-    [zoom>=15] {
-      line-width: 1;
-      text-name: "[height]";
-      text-face-name: @sans_lt;
-      text-placement: line;
-      text-fill: @contour_line;
-      text-halo-fill: @land;
-      text-halo-radius: 1;
-      text-spacing: 500;
-    }
-  }
-}
-
 
 /* ================================================================== */
 /* WATER AREAS
@@ -377,33 +343,18 @@ Map {
 /* ================================================================== */
 
 
-#admin-low[maritime='no'][admin_level=2][zoom>=2][zoom<5],
-#admin-low[maritime='no'][admin_level=3][zoom>=4][zoom<5],
-#admin-low[maritime='no'][admin_level=4][zoom>=4][zoom<5],
-#admin-low[zoom>=5][zoom<11],
-#admin-med[zoom>=11][zoom<13],
+#admin-low[admin_level=2][zoom>=2][zoom<5],
+#admin-low[admin_level=3][zoom>=4][zoom<5],
+#admin-low[admin_level=4][zoom>=4][zoom<5],
+#admin-low[zoom>=5],
+#admin-med[zoom>=11],
 #admin-high[zoom>=13] {
-  [admin_level=2] {
-    outline/line-color: lighten(@admin_2, 25%);
-    outline/line-width: 2;
-    [zoom>=8] {
-      outline/line-width: 3;
-    }
+  [border_type='nation'] {
+    line-color: @admin_2;
+    line-opacity: .3;
+    line-width: .5;
   }
-  eraser/line-color: white;
-  eraser/line-width: 1;
-  eraser/comp-op: darken;
-  line-color: @admin_2;
-  line-opacity: .2;
-  line-width: 1;
-  [admin_level>2] {
-    line-dasharray: 10,5;
-    line-color: @admin_3;
-    [admin_level>=6] {
-      line-dasharray: 5,5;
-      line-width: 0.8;
-    }
-  }
+  line-opacity: 0;
 }
 
 /* ================================================================== */

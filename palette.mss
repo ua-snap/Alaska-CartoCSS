@@ -21,12 +21,12 @@
 Map { font-directory: url(./fonts); }
 
 /* set up font sets for various weights and styles */
-@sans_lt:           "Open Sans Regular", "DejaVu Sans Book", "unifont Medium";
-@sans_lt_italic:    "Open Sans Italic", "DejaVu Sans Italic", "Open Sans Regular", "DejaVu Sans Book", "unifont Medium";
-@sans:              "Open Sans Semibold", "Open Sans Regular", "DejaVu Sans Book", "unifont Medium";
-@sans_italic:       "Open Sans Semibold Italic", "DejaVu Sans Italic", "Open Sans Regular", "DejaVu Sans Book", "unifont Medium";
-@sans_bold:         "Open Sans Bold", "DejaVu Sans Bold", "Open Sans Regular", "DejaVu Sans Book", "unifont Medium";
-@sans_bold_italic:  "Open Sans Bold Italic", "DejaVu Sans Bold Italic", "Open Sans Regular", "DejaVu Sans Book", "unifont Medium";
+@sans_lt:           "Lato Light";
+@sans_lt_italic:    "Lato Light Italic";
+@sans:              "Lato Regular";
+@sans_italic:       "Lato Italic";
+@sans_bold:         "Lato Black";
+@sans_bold_italic:  "Lato Black Italic";
 
 /* Some fonts are larger or smaller than others. Use this variable to
    globally increase or decrease the font sizes. */
@@ -38,8 +38,8 @@ Map { font-directory: url(./fonts); }
 /* LANDUSE & LANDCOVER COLORS
 /* ================================================================== */
 
-@land:              #F7F6F1;
-@water:             #90cccb; //#79c1c0
+@land:              #f0f9ee;
+@water:             #8EDDF9; // Forget-me-not blue!
 @beach:             #EEE5B2;
 @cemetery:          #D6DED2;
 @military:          #D1BFAA;
