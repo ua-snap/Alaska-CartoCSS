@@ -415,7 +415,7 @@ Layer:
       password: ''
       port: 5432
       project: HDMCartoCSS
-      table: "( SELECT way, admin_level::integer, CASE WHEN tags->'maritime'='yes' THEN 'yes' ELSE 'no' END AS maritime FROM planet_osm_roads WHERE \"boundary\" = 'administrative' AND admin_level IN ('1','2','3','4', '5', '6', '7', '8', '9', '10') AND \"boundary\" IS NOT NULL ORDER BY admin_level DESC) AS data"
+      table: "( SELECT way, admin_level::integer, CASE WHEN tags->'maritime'='yes' THEN 'yes' ELSE 'no' END AS maritime, tags->'border_type' AS border_type FROM planet_osm_roads WHERE \"boundary\" = 'administrative' AND admin_level IN ('1','2','3','4', '5', '6', '7', '8', '9', '10') AND \"boundary\" IS NOT NULL ORDER BY admin_level DESC) AS data"
       type: postgis
       extent: '-20037508,-19929239,20037508,19929239'
       user: osm
@@ -441,7 +441,7 @@ Layer:
       password: ''
       port: 5432
       project: HDMCartoCSS
-      table: "( SELECT way, admin_level::integer, CASE WHEN tags->'maritime'='yes' THEN 'yes' ELSE 'no' END AS maritime FROM planet_osm_roads WHERE \"boundary\" = 'administrative' AND admin_level IN ('1','2','3','4', '5', '6', '7', '8') AND \"boundary\" IS NOT NULL ORDER by admin_level DESC) AS data"
+      table: "( SELECT way, admin_level::integer, CASE WHEN tags->'maritime'='yes' THEN 'yes' ELSE 'no' END AS maritime, tags->'border_type' AS border_type FROM planet_osm_roads WHERE \"boundary\" = 'administrative' AND admin_level IN ('1','2','3','4', '5', '6', '7', '8') AND \"boundary\" IS NOT NULL ORDER by admin_level DESC) AS data"
       type: postgis
       extent: '-20037508,-19929239,20037508,19929239'
       user: osm
