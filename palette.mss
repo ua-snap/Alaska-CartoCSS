@@ -21,17 +21,17 @@
 Map { font-directory: url(./fonts); }
 
 /* set up font sets for various weights and styles */
-@sans_lt:           "Lato Light";
-@sans_lt_italic:    "Lato Light Italic";
-@sans:              "Lato Regular";
-@sans_italic:       "Lato Italic";
-@sans_bold:         "Lato Black";
-@sans_bold_italic:  "Lato Black Italic";
+@sans_lt:           "Noto Sans Regular";
+@sans_lt_italic:    "Noto Sans Regular";
+@sans:              "Noto Sans Regular";
+@sans_italic:       "Noto Sans Italic";
+@sans_bold:         "Noto Sans Bold";
+@sans_bold_italic:  "Noto Sans Bold Italic";
 
 /* Some fonts are larger or smaller than others. Use this variable to
    globally increase or decrease the font sizes. */
 /* Note this is only implemented for certain things so far */
-@text_adjust: 0;
+@text_adjust: 4;
 
 
 /* ================================================================== */

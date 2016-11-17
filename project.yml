@@ -11,7 +11,7 @@ format: png
 interactivity: false
 minzoom: 0
 maxzoom: 12
-srs: +proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs
+srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
 Stylesheet:
   - "palette.mss"
   - "base.mss"
@@ -35,7 +35,7 @@ Layer:
     srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
     srs-name: 900913
   - Datasource:
-      file: /usr/local/share/maps/data/land-polygons-split-3857/land_polygons.shp
+      file: /usr/local/share/maps/data/land-polygons-complete-4326/land_polygons.shp
       type: shape
     class: shp
     geometry: polygon
