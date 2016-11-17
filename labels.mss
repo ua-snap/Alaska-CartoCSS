@@ -41,7 +41,7 @@
     shield-file: url('icons/place/country_capital.png');
   }
   shield-name:'[name]';
-  shield-size: 9;
+  shield-size: 9+@text_adjust;
   shield-face-name: @sans;
   shield-halo-radius: 1;
   shield-wrap-width: 50;
@@ -56,28 +56,28 @@
   [type='city'] {
     shield-fill: @city_text;
     shield-halo-fill: @city_halo;
-    shield-size: 10;
+    shield-size: 10+@text_adjust;
   }
   [is_capital='country'] {
     shield-face-name: @sans_bold;
     shield-fill: @capital_text;
     shield-halo-fill: @capital_halo;
-    shield-size: 11;
+    shield-size: 11+@text_adjust;
     shield-line-spacing: -2;
     shield-text-dx: 4;
   }
   [zoom>=10] {
     shield-halo-radius: 2;
-    shield-size: 10;
-    [type='city'] { shield-size: 11;}
-    [is_capital='country'] { shield-size: 11;}
+    shield-size: 10+@text_adjust;
+    [type='city'] { shield-size: 11+@text_adjust;}
+    [is_capital='country'] { shield-size: 11+@text_adjust;}
   }
 }
 
 #place[type='city'][zoom>=11][zoom<=15],
 #place[type='town'][zoom>=11][zoom<=17] {
   text-name:'[name]';
-  text-size: 11;
+  text-size: 11+@text_adjust;
   text-face-name: @sans;
   text-halo-radius: 2;
   text-wrap-width: 50;
@@ -87,7 +87,7 @@
   [type='city'] {
     text-fill: @city_text;
     text-halo-fill: @city_halo;
-    text-size: 12;
+    text-size: 12+@text_adjust;
   }
   [is_capital='country'] {
     text-face-name: @sans_bold;
@@ -97,35 +97,35 @@
     text-transform: uppercase;
   }
   [zoom>=12] {
-    text-size: 12;
+    text-size: 12+@text_adjust;
     [type='city'],
-    [is_capital='country'] { text-size: 13;}
+    [is_capital='country'] { text-size: 13+@text_adjust;}
   }
   [zoom>=13] {
     text-transform: uppercase;
     text-character-spacing: 0;
     [type='city'],
-    [is_capital='country'] { text-size: 14;}
+    [is_capital='country'] { text-size: 14+@text_adjust;}
   }
   [zoom>=14]{
-    text-size:13;
+    text-size:13+@text_adjust;
     text-character-spacing: 1;
     [type='city'],
-    [is_capital='country'] { text-size: 15;}
+    [is_capital='country'] { text-size: 15+@text_adjust;}
   }
   [zoom>=15]{
-    text-size:14;
+    text-size:14+ @text_adjust;
     text-character-spacing: 2;
     [type='city'],
-    [is_capital='country'] { text-size: 16;}
+    [is_capital='country'] { text-size: 16+@text_adjust;}
   }
   [zoom>=16]{
-    text-size:15;
-    text-line-spacing: 5;
+    text-size:15+@text_adjust;
+    text-line-spacing: 5+@text_adjust;
   }
   [zoom>=17]{
-    text-size:16;
-    text-line-spacing: 6;
+    text-size:16+@text_adjust;
+    text-line-spacing: 6+@text_adjust;
   }
 }
 
@@ -141,7 +141,7 @@
   text-face-name:@sans;
   text-placement:point;
   text-fill:@other_text;
-  text-size:10;
+  text-size:10+@text_adjust;
   text-halo-fill:@other_halo;
   text-halo-radius:1;
   text-wrap-width: 30;
@@ -152,7 +152,7 @@
     text-min-distance: 50;
   }
   [zoom>=14] {
-    text-size:11;
+    text-size:11+@text_adjust;
     text-character-spacing: 0;
     text-wrap-width: 40;
     text-line-spacing: 1;
@@ -166,20 +166,20 @@
     text-min-distance: 30;
   }
   [zoom>=16] {
-    text-size:12;
+    text-size:12+@text_adjust;
     text-character-spacing: 1;
     text-wrap-width: 120;
     text-line-spacing: 2;
     text-min-distance: 10;
   }
   [zoom>=17] {
-    text-size:13;
+    text-size:13+@text_adjust;
     text-character-spacing: 2;
     text-wrap-width: 160;
     text-line-spacing: 4;
   }
   [zoom>=18] {
-    text-size:14;
+    text-size:14+@text_adjust;
     text-character-spacing: 3;
     text-line-spacing: 6;
   }
@@ -190,22 +190,22 @@
   text-face-name:@sans;
   text-placement:point;
   text-fill:@locality_text;
-  text-size:9;
+  text-size:9+@text_adjust;
   text-halo-fill:@locality_halo;
   text-halo-radius:1;
   text-wrap-width: 30;
   [zoom>=16] {
-    text-size:10;
+    text-size:10+@text_adjust;
     text-wrap-width: 60;
     text-line-spacing: 1;
   }
   [zoom>=17] {
-    text-size:11;
+    text-size:11+@text_adjust;
     text-wrap-width: 120;
     text-line-spacing: 2;
   }
   [zoom>=18] {
-    text-size:12;
+    text-size:12+@text_adjust;
     text-character-spacing: 0;
     text-line-spacing: 4;
   }
@@ -218,7 +218,7 @@
 .poi::label[zoom>=16] {
     text-name: "";
     text-face-name: @sans;
-    text-size: 10;
+    text-size: 10+@text_adjust;
     text-wrap-width: 30;
     text-fill: @poi_text;
     text-halo-fill: @poi_halo;
@@ -301,7 +301,7 @@
 .poi::craft[zoom>=18][craft!=null],
 .poi::shop[zoom>=19][shop!=null] {
   text-face-name: @sans;
-  text-size: 10;
+  text-size: 10+ @text_adjust;
   text-wrap-width: 30;
   text-fill: @poi_text2;
   text-halo-fill: @poi_halo;
@@ -334,7 +334,7 @@
     text-name: "[name]";
     text-halo-radius: 1.5;
     text-face-name:@sans;
-    text-size: 11;
+    text-size: 11+ @text_adjust;
     text-wrap-width:30;
     text-fill: #888;
     text-halo-fill: #fff;
@@ -372,7 +372,7 @@
   [zoom=17][area>20000],
   [zoom=18][area>5000] {
     text-name: "[name]";
-    text-size: 13;
+    text-size: 13+ @text_adjust;
     text-wrap-width: 60;
     text-character-spacing: 0;
     text-halo-radius: 2;
@@ -380,13 +380,13 @@
   [zoom=16][area>1600000],
   [zoom=17][area>80000],
   [zoom=18][area>20000] {
-    text-size: 15;
+    text-size: 15+ @text_adjust;
     text-character-spacing: 1;
     text-wrap-width: 120;
   }
   [zoom>=17][area>1600000],
   [zoom>=18][area>80000] {
-    text-size: 20;
+    text-size: 20+ @text_adjust;
     text-character-spacing: 2;
     text-wrap-width: 180;
   }
@@ -407,7 +407,7 @@
   text-halo-radius: 1;
   text-placement: line;
   text-min-distance: 400;
-  text-size: 10;
+  text-size: 10+ @text_adjust;
   text-dy: 7;
   [type='river'][zoom=14],
   [type='canal'][zoom=16],
@@ -416,12 +416,12 @@
   }
   [type='river'][zoom=15],
   [type='canal'][zoom=17] {
-    text-size: 11;
+    text-size: 11+ @text_adjust;
     text-name: "[name].replace('([\S\ ])','$1 ')";
   }
   [type='river'][zoom>=16],
   [type='canal'][zoom>=18] {
-    text-size: 14;
+    text-size: 14+ @text_adjust;
     text-name: "[name].replace('([\S\ ])','$1 ')";
     text-spacing: 300;
   }
@@ -440,7 +440,7 @@
   text-halo-fill: @road_halo;
   text-halo-radius: 1;
   text-min-distance: 60;
-  text-size:10;
+  text-size:10+ @text_adjust;
   text-avoid-edges: true;
   text-character-spacing: -1;
   [zoom=11] { text-min-distance:70; }
@@ -458,7 +458,7 @@
   text-halo-fill: @road_halo;
   text-halo-radius: 1;
   text-min-distance:60;
-  text-size:11;
+  text-size:11+ @text_adjust;
   text-avoid-edges: true;
   text-character-spacing: -1;
 }
@@ -467,12 +467,11 @@
   text-name:'[name]';
   text-face-name:@sans;
   text-placement:line;
-  text-size:10;
+  text-size:10+ @text_adjust;
   text-fill:@road_text;
   text-halo-fill:@road_halo;
   text-halo-radius:1;
   text-min-distance:60;
-  text-size:11;
   text-avoid-edges: true;
   text-character-spacing: -1;
 }
@@ -504,7 +503,7 @@
 #admin-label-5-10[zoom>=13] {
   text-name: "'      '+[name]+'      '";
   text-fill: @admin_2_text;
-  text-size: 10;
+  text-size: 10+ @text_adjust;
   text-placement: line;
   text-dy: -7;
   text-face-name: @sans_lt_italic;
@@ -529,12 +528,12 @@
   text-fill: @housenumber_text;
   text-halo-fill: @road_halo;
   text-halo-radius: 1;
-  text-size: 7;
+  text-size: 7+ @text_adjust;
   [zoom=17][mod5='no'] {
     text-name: "";
   }
   [zoom >= 18] {
-    text-size: 9;
+    text-size: 9+ @text_adjust;
   }
 }
 
@@ -548,7 +547,7 @@
   text-fill: darken(@water,30%);
   text-halo-fill: lighten(@water,10%);
   text-halo-radius: 1;
-  text-size: 11;
+  text-size: 11+ @text_adjust;
 }
 
 #natural_point_label[type='volcano'][zoom>=13],
@@ -557,7 +556,7 @@
   shield-name: '[name]';
   shield-face-name: @sans_lt_italic;
   shield-fill: @peak;
-  shield-size: 10;
+  shield-size: 10+@text_adjust;
   shield-min-distance: 50;
   shield-text-dy: 6;
   shield-text-dx: 6;
