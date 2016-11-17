@@ -12,6 +12,7 @@ interactivity: false
 minzoom: 0
 maxzoom: 12
 srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+srs-name: 3338
 Stylesheet:
   - "palette.mss"
   - "base.mss"
@@ -40,14 +41,14 @@ Layer:
     class: shp
     geometry: polygon
     extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
+      - -180
+      - -90
+      - 180
+      - 90
     id: land-high
     name: land-high
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
+    srs: srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+    srs-name: 4326
   - Datasource:
       dbname: hdm
       geometry_field: way
