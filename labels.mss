@@ -40,6 +40,7 @@
   [is_capital='country'] {
     shield-file: url('icons/place/country_capital.png');
   }
+  shield-avoid-edges: true;
   shield-name:'[name]';
   shield-size: 9+@text_adjust;
   shield-face-name: @sans;
