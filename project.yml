@@ -47,7 +47,7 @@ Layer:
       - 90
     id: land-high
     name: land-high
-    srs: srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
     srs-name: 4326
   - Datasource:
       dbname: hdm
