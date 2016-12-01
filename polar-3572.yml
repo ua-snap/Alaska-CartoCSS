@@ -1,18 +1,18 @@
 bounds:
-  - -2255938.4795
-  - 449981.1884
-  - 1646517.6368
-  - 2676986.5642
+  - -2444667.4015
+  - -4234288.1470
+  - 0
+  - 0
 center:
-  - -304710.42135
-  - 1563483.8763
+  - -105908.827078
+  - -2723963.001773
   - 5
 format: png
 interactivity: false
 minzoom: 0
-maxzoom: 12
-srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-srs-name: 3338
+maxzoom: 15
+srs: +proj=laea +lat_0=90 +lon_0=-150 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m +no_defs
+srs-name: 3572
 Stylesheet:
   - "palette.mss"
   - "base.mss"
@@ -1350,7 +1350,7 @@ Layer:
     advanced:
       extent_from_subquery: 'true'
 scale: 1
-metatile: 4
+metatile: 16 
 attribution: 'Data © OpenStreetMap (and) contributors, CC-BY-SA'
 description: ''
 name: hdm

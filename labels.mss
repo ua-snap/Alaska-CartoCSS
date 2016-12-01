@@ -40,7 +40,6 @@
   [is_capital='country'] {
     shield-file: url('icons/place/country_capital.png');
   }
-  shield-avoid-edges: true;
   shield-name:'[name]';
   shield-size: 9+@text_adjust;
   shield-face-name: @sans;
@@ -147,7 +146,6 @@
   text-halo-radius:1;
   text-wrap-width: 30;
   text-min-distance: 100;
-  text-avoid-edges: true;
   text-label-position-tolerance: 10;
   [zoom>=13] {
     text-min-distance: 50;
@@ -230,7 +228,6 @@
     text-label-position-tolerance: 18;
     text-placement-type: simple;
     text-placements: "S,N,W,E";
-    text-avoid-edges: true;
     text-clip: false;
     text-character-spacing: -1;
     [zoom>=16] {
@@ -313,7 +310,6 @@
   text-label-position-tolerance: 18;
   text-placement-type: simple;
   text-placements: "S,N,W,E";
-  text-avoid-edges: true;
   text-clip: false;
   text-name: "[name]";
 }
@@ -442,7 +438,6 @@
   text-halo-radius: 1;
   text-min-distance: 60;
   text-size:10+ @text_adjust;
-  text-avoid-edges: true;
   text-character-spacing: -1;
   [zoom=11] { text-min-distance:70; }
   [zoom=12] { text-min-distance:80; }
@@ -460,7 +455,6 @@
   text-halo-radius: 1;
   text-min-distance:60;
   text-size:11+ @text_adjust;
-  text-avoid-edges: true;
   text-character-spacing: -1;
 }
 
@@ -473,7 +467,6 @@
   text-halo-fill:@road_halo;
   text-halo-radius:1;
   text-min-distance:60;
-  text-avoid-edges: true;
   text-character-spacing: -1;
 }
 

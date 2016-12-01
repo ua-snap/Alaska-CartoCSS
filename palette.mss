@@ -21,17 +21,26 @@
 Map { font-directory: url(./fonts); }
 
 /* set up font sets for various weights and styles */
-@sans_lt:           "Noto Sans Regular";
-@sans_lt_italic:    "Noto Sans Regular";
-@sans:              "Noto Sans Regular";
-@sans_italic:       "Noto Sans Italic";
-@sans_bold:         "Noto Sans Bold";
-@sans_bold_italic:  "Noto Sans Bold Italic";
+@sans_lt:       "Noto Sans Regular",
+		"Noto Sans Canadian Aboriginal Regular",
+		"DejaVu Sans Book",
+                "Unifont Medium", "unifont Medium";
+
+@sans_lt_italic:    "Noto Sans Italic", "Noto Sans Canadian Aboriginal Regular", "DejaVu Sans Book",
+                "Unifont Medium", "unifont Medium";
+@sans:              "Noto Sans Regular", "Noto Sans Canadian Aboriginal Regular", "DejaVu Sans Book",
+                "Unifont Medium", "unifont Medium";
+@sans_italic:       "Noto Sans Italic", "Noto Sans Canadian Aboriginal Regular", "DejaVu Sans Oblique", "DejaVu Sans Book",
+                "Unifont Medium", "unifont Medium";
+@sans_bold:         "Noto Sans Bold", "Noto Sans Canadian Aboriginal Regular", "DejaVu Sans Bold", "DejaVu Sans Book",
+                "Unifont Medium", "unifont Medium";
+@sans_bold_italic:  "Noto Sans Bold Italic", "Noto Sans Canadian Aboriginal Regular", "DejaVu Sans" "DejaVu Sans Book",
+                "Unifont Medium", "unifont Medium";
 
 /* Some fonts are larger or smaller than others. Use this variable to
    globally increase or decrease the font sizes. */
 /* Note this is only implemented for certain things so far */
-@text_adjust: 4;
+@text_adjust: 2;
 
 
 /* ================================================================== */
